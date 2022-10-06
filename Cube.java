@@ -234,7 +234,7 @@ public class Cube {
 
           //edge 2 changed
           rubiks[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge3[0]][eFace.edge1[1]];
-          rubiks[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge1[0]][eFace.edge1[2]];
+          rubiks[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge3[0]][eFace.edge1[2]];
           rubiks[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
 
           //edge 3 changed
