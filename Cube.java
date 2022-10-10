@@ -170,7 +170,7 @@ public class Cube {
           edge4[3] = 8;
           break;
         }
-      }
+    }
 
   }
 
@@ -218,7 +218,7 @@ public class Cube {
 
           break;
           case "cc":
-          rubiks[eFace.current_face][0] = copy[eFace.current_face][2];
+          rubiks[eFace.current_face][0] = copy[eFace.current_face][1];
           rubiks[eFace.current_face][1] = copy[eFace.current_face][5];
           rubiks[eFace.current_face][2] = copy[eFace.current_face][8];
           rubiks[eFace.current_face][3] = copy[eFace.current_face][1];
@@ -233,19 +233,19 @@ public class Cube {
           rubiks[eFace.edge1[0]][eFace.edge1[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
 
           //edge 2 changed
-          rubiks[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge3[0]][eFace.edge1[1]];
-          rubiks[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge3[0]][eFace.edge1[2]];
-          rubiks[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
+          rubiks[eFace.edge2[0]][eFace.edge2[1]] = copy[eFace.edge3[0]][eFace.edge3[1]];
+          rubiks[eFace.edge2[0]][eFace.edge2[2]] = copy[eFace.edge3[0]][eFace.edge3[2]];
+          rubiks[eFace.edge2[0]][eFace.edge2[3]] = copy[eFace.edge3[0]][eFace.edge3[3]];
 
           //edge 3 changed
-          rubiks[eFace.edge3[0]][eFace.edge3[1]] = copy[eFace.edge2[0]][eFace.edge2[1]];
-          rubiks[eFace.edge3[0]][eFace.edge3[2]] = copy[eFace.edge2[0]][eFace.edge2[2]];
-          rubiks[eFace.edge3[0]][eFace.edge3[3]] = copy[eFace.edge2[0]][eFace.edge2[3]];
+          rubiks[eFace.edge3[0]][eFace.edge3[1]] = copy[eFace.edge4[0]][eFace.edge4[1]];
+          rubiks[eFace.edge3[0]][eFace.edge3[2]] = copy[eFace.edge4[0]][eFace.edge4[2]];
+          rubiks[eFace.edge3[0]][eFace.edge3[3]] = copy[eFace.edge4[0]][eFace.edge4[3]];
 
           //edge 4 changed
-          rubiks[eFace.edge4[0]][eFace.edge4[1]] = copy[eFace.edge3[0]][eFace.edge3[1]];
-          rubiks[eFace.edge4[0]][eFace.edge4[2]] = copy[eFace.edge3[0]][eFace.edge3[2]];
-          rubiks[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge3[0]][eFace.edge3[3]];
+          rubiks[eFace.edge4[0]][eFace.edge4[1]] = copy[eFace.edge1[0]][eFace.edge1[1]];
+          rubiks[eFace.edge4[0]][eFace.edge4[2]] = copy[eFace.edge1[0]][eFace.edge1[2]];
+          rubiks[eFace.edge4[0]][eFace.edge4[3]] = copy[eFace.edge1[0]][eFace.edge1[3]];
           break;
       }
 
@@ -307,32 +307,51 @@ public class Cube {
               RubiksCube.showCube();
               break;
               case "d":
+              RubiksCube.turnFace(3, "c");
+              RubiksCube.showCube();
               break;
               case "r":
               RubiksCube.turnFace(0, "c");
               RubiksCube.showCube();
               break;
               case "l":
+              RubiksCube.turnFace(5, "c");
+              RubiksCube.showCube();
               break;
               case "f":
+              RubiksCube.turnFace(1, "c");
+              RubiksCube.showCube();
               break;
               case "b":
+              RubiksCube.turnFace(2, "c");
+              RubiksCube.showCube();
               break;
               case "u'":
+              RubiksCube.turnFace(4, "cc");
+              RubiksCube.showCube();
               break;
               case "d'":
+              RubiksCube.turnFace(3, "cc");
+              RubiksCube.showCube();
               break;
               case "r'":
               RubiksCube.turnFace(0, "cc");
               RubiksCube.showCube();
               break;
               case "l'":
+              RubiksCube.turnFace(5, "cc");
+              RubiksCube.showCube();
               break;
               case "f'":
+              RubiksCube.turnFace(1, "cc");
+              RubiksCube.showCube();
               break;
               case "b'":
+              RubiksCube.turnFace(2, "cc");
+              RubiksCube.showCube();
               break;
               case "s'":
+              proceed = true;
               break;
               case "q'":
               proceed = false;
